@@ -1,8 +1,7 @@
-{"model_file": "https://drive.google.com/file/d/1AdHyaWVHM5oqR1pPMqhpsA6InYi5vo7Z/view?usp=share_link", 
- "sampling_rate": 16000, 
+{"sampling_rate": 16000, 
  "window_size": 16384, 
  "hop_length": 160, 
- "label_min_hz": 164.81377846, 
- "label_n_bins": 480, 
- "label_granularity_c": 12.5, 
- "label_smooth_std_c": 15.0}
+ "instrument_min_hz": 164.81377846, 
+ "instrument_n_bins": 480, 
+ "instrument_granularity_c": 12.5, 
+ "instrument_smooth_std_c": 15.0}
