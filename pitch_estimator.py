@@ -342,8 +342,8 @@ class TAPE(TwoStreams):
         print(package_dir)
         with open(os.path.join(package_dir, instrument, instrument + "_range.json"), "r") as f:
             args = json.load(f)
-        labeling = Label(n_bins=args['label_n_bins'], min_f0_hz=args['label_min_hz'],
-                         granularity_c=args['label_granularity_c'], smooth_std_c=args['label_smooth_std_c'])
+        labeling = Label(n_bins=args['instrument_n_bins'], min_f0_hz=args['instrument_min_hz'],
+                         granularity_c=args['instrument_granularity_c'], smooth_std_c=args['instrument_smooth_std_c'])
         if not window_size:
             window_size = args['window_size']
         if not hop_length:
