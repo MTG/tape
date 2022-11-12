@@ -339,7 +339,6 @@ class TAPE(TwoStreams):
     def __init__(self, instrument='violin', window_size=None, hop_length=None):
         assert instrument == 'violin', 'As of now, the only supported instrument is the violin'
         package_dir = os.path.dirname(os.path.realpath(__file__))
-        print(package_dir)
         with open(os.path.join(package_dir, instrument, instrument + "_range.json"), "r") as f:
             args = json.load(f)
         labeling = Label(n_bins=args['instrument_n_bins'], min_f0_hz=args['instrument_min_hz'],
