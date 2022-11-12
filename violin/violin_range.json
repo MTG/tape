@@ -1,4 +1,5 @@
-{"sampling_rate": 16000, 
+{"model_file": "https://github.com/MTG/tape/raw/main/violin/violin_model.pt",
+ "sampling_rate": 16000, 
  "window_size": 16384, 
  "hop_length": 160, 
  "instrument_min_hz": 164.81377846, 
