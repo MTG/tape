@@ -23,4 +23,5 @@ with torch.no_grad():
 ```
 
 For real-world use examples on violin--piano recordings from YouTube, please visit the colab demo. You can also use your own YouTube links to directly sonify the violin pitch track from any recording.
+
 <a href="https://githubtocolab.com/MTG/tape/blob/main/colab_demo.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/></a>
