@@ -355,11 +355,11 @@ class TAPE(TwoStreams):
     def load_weight(self, instrument):
         self.download_weights(instrument)
         package_dir = os.path.dirname(os.path.realpath(__file__))
-        filename = "{}.pt".format(instrument)
+        filename = "{}_model.pt".format(instrument)
         self.load_state_dict(torch.load(os.path.join(package_dir, instrument, filename)))
 
     def download_weights(self, instrument):
-        weight_file = "{}.pt".format(instrument)
+        weight_file = "{}_model.pt".format(instrument)
 
         # in all other cases, decompress the weights file if necessary
         package_dir = os.path.dirname(os.path.realpath(__file__))
