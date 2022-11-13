@@ -6,15 +6,15 @@ TAPE is a novel pitch estimator (or pitch stream segregator) improving **blind**
 
 Usage:
 ```
-from tape import pitch_estimator
+from tape.pitch_estimator import TAPE
 import torch
 import librosa
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-violin_tape = pitch_estimator.TAPE(instrument='violin', 
-                                   window_size=16*1024,   # 1.024 seconds
-                                   hop_length=128         # 128/16000= 8 miliseconds 
-                                   ).to(device))
+violin_tape = TAPE(instrument='violin', 
+                   window_size=16*1024,   # 1.024 seconds,
+                   hop_length=128         # 128/16000= 8 miliseconds
+                   ).to(device))
 
 audio, _ = librosa.load('violin-piano.wav', sr=violin_tape.sr)
 with torch.no_grad():
