@@ -19,8 +19,6 @@ violin_tape = pitch_estimator.TAPE(instrument='violin',
 audio, _ = librosa.load('violin-piano.wav', sr=violin_tape.sr)
 with torch.no_grad():
   time, frequency, confidence, activation = violin_tape.predict(torch.tensor(audio), viterbi=False, batch_size=128)
-
-
 ```
 
 For more examples, please visit the colab demo.
