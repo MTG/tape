@@ -22,4 +22,4 @@ with torch.no_grad():
                                                                 viterbi=False, batch_size=128)
 ```
 
-For more examples, please visit the colab demo.
+For real-world performance on the violin--piano recordings from YouTube, please visit the colab demo, where you can directly sonify the violin pitch track from any YouTube video link.
