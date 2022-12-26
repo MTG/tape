@@ -259,8 +259,8 @@ class Pathway(nn.Module):
         strides = [4, 1, 1, 1, 1, 1]
         total_dilation = int(np.log2(window_size / 1024))
         dilations = [2 for dilation in range(total_dilation)] + [1 for no_dilation in range(6 - total_dilation)]
-        strides = [s * dilations[i] for i, s in enumerate(strides)]
-
+        #strides = [s * dilations[i] for i, s in enumerate(strides)]
+        #changed for seq2seq
         for i in range(len(self.layers)):
             f, w, s, d, in_channel = filters[i + 1], widths[i], strides[i], dilations[i], filters[i]
             self.add_module("conv%d" % i, ConvBlock(f, w, s, d, in_channel))
